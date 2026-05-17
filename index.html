@@ -474,6 +474,8 @@
 
 
   <!-- ── PAGE: GET A QUOTE ── -->
+ <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="8ab37c4d-fa7b-41bf-90ea-03e22ad343c2">
   <div id="page-quote" class="page">
   <div class="quote-wrap">
  
@@ -514,16 +516,6 @@
  
         <!-- FORM — now a real <form> posting to Web3Forms -->
         <div id="quoteFormContent">
-          <form
-            id="quoteForm"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-            novalidate
-          >
-            <input type="hidden" name="access_key" value="8ab37c4d-fa7b-41bf-90ea-03e22ad343c2">
-            <input type="hidden" name="subject" value="New Quote Request — Webtion Lab">
-            <input type="checkbox" name="botcheck" style="display:none">
- 
             <div class="fh">
               <h2>Get Your Free Quote</h2>
               <p>Fill in the details below — the more you share, the better we can tailor our proposal.</p>
@@ -621,7 +613,7 @@
     </div><!-- /quote-right -->
   </div>
 </div><!-- /page-quote -->
-
+</form>
 </div><!-- /router-outlet -->
 
 
