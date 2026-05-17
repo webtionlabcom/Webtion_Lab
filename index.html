@@ -475,80 +475,85 @@
 
   <!-- ── PAGE: GET A QUOTE ── -->
   <div id="page-quote" class="page">
-    <div class="quote-wrap">
-
-      <!-- LEFT PANEL -->
-      <div class="quote-left">
-        <div class="ql-logo">
-          <img src="assets/logo.jpg" alt="Webtion Lab">
-          <span>Webtion Lab</span>
-        </div>
-        <h2>Let's Build Something <em>Amazing</em> Together</h2>
-        <p class="ql-desc">Tell us about your project and we'll get back to you within <strong>24 hours</strong> with a tailored proposal — completely free.</p>
-        <div class="ql-perks">
-          <div class="perk"><span class="perk-ico">⚡</span><div><strong>Fast Response</strong><p>We reply within 24 hours — usually much sooner.</p></div></div>
-          <div class="perk"><span class="perk-ico">💬</span><div><strong>Free Consultation</strong><p>No commitment, no pressure — just a friendly chat about your needs.</p></div></div>
-          <div class="perk"><span class="perk-ico">🔒</span><div><strong>100% Confidential</strong><p>Your details are safe with us. NDAs signed on request.</p></div></div>
-          <div class="perk"><span class="perk-ico">📍</span><div><strong>Based in Noida, UP</strong><p>Serving clients across India and globally.</p></div></div>
-        </div>
-        <div class="ql-contacts">
-          <div class="ql-c">📞 <a href="tel:+919711186182">+91 97111 86182</a></div>
-          <div class="ql-c">✉️ <a href="mailto:Ravi.shankar.lawaniya@gmail.com">Ravi.shanka.lawaniya@gmail.com</a></div>
-          <div class="ql-c">📍 Noida, Uttar Pradesh, India</div>
-        </div>
+  <div class="quote-wrap">
+ 
+    <!-- LEFT PANEL -->
+    <div class="quote-left">
+      <div class="ql-logo">
+        <img src="assets/logo.jpg" alt="Webtion Lab">
+        <span>Webtion Lab</span>
       </div>
-
-      <!-- RIGHT PANEL — FORM -->
-      <div class="quote-right">
-        <div class="quote-form-inner">
-
-          <!-- SUCCESS STATE -->
-          <div class="success-box" id="successBox">
-            <div class="success-icon">🎉</div>
-            <h2>Quote Request Sent!</h2>
-            <p>Thank you! We've received your query and will reach out within <strong>24 hours</strong> with a tailored proposal.</p>
-            <div class="ss-table" id="ss-table"></div>
-            <p style="font-size:14px;color:#90a8b8;margin-bottom:24px">Our team in Noida, UP will review your requirements and send a detailed proposal to your email.</p>
-            <button class="btn-primary" onclick="QuoteForm.reset()">Submit Another Query →</button>
-          </div>
-
-          <!-- FORM -->
-          <form action="https://api.web3forms.com/submit" method="POST" id="quoteForm">
+      <h2>Let's Build Something <em>Amazing</em> Together</h2>
+      <p class="ql-desc">Tell us about your project and we'll get back to you within <strong>24 hours</strong> with a tailored proposal — completely free.</p>
+      <div class="ql-perks">
+        <div class="perk"><span class="perk-ico">⚡</span><div><strong>Fast Response</strong><p>We reply within 24 hours — usually much sooner.</p></div></div>
+        <div class="perk"><span class="perk-ico">💬</span><div><strong>Free Consultation</strong><p>No commitment, no pressure — just a friendly chat about your needs.</p></div></div>
+        <div class="perk"><span class="perk-ico">🔒</span><div><strong>100% Confidential</strong><p>Your details are safe with us. NDAs signed on request.</p></div></div>
+        <div class="perk"><span class="perk-ico">📍</span><div><strong>Based in Noida, UP</strong><p>Serving clients across India and globally.</p></div></div>
+      </div>
+      <div class="ql-contacts">
+        <div class="ql-c">📞 <a href="tel:+919711186182">+91 97111 86182</a></div>
+        <div class="ql-c">✉️ <a href="mailto:Ravi.shankar.lawaniya@gmail.com">Ravi.shankar.lawaniya@gmail.com</a></div>
+        <div class="ql-c">📍 Noida, Uttar Pradesh, India</div>
+      </div>
+    </div>
+ 
+    <!-- RIGHT PANEL — FORM -->
+    <div class="quote-right">
+      <div class="quote-form-inner">
+ 
+        <!-- SUCCESS STATE -->
+        <div class="success-box" id="successBox">
+          <div class="success-icon">🎉</div>
+          <h2>Quote Request Sent!</h2>
+          <p>Thank you! We've received your query and will reach out within <strong>24 hours</strong> with a tailored proposal.</p>
+          <div class="ss-table" id="ss-table"></div>
+          <p style="font-size:14px;color:#90a8b8;margin-bottom:24px">Our team in Noida, UP will review your requirements and send a detailed proposal to your email.</p>
+          <button class="btn-primary" onclick="QuoteForm.reset()">Submit Another Query →</button>
+        </div>
+ 
+        <!-- FORM — now a real <form> posting to Web3Forms -->
+        <div id="quoteFormContent">
+          <form
+            id="quoteForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            novalidate
+          >
             <input type="hidden" name="access_key" value="8ab37c4d-fa7b-41bf-90ea-03e22ad343c2">
-            <input type="hidden" name="subject" value="New Quote Request - Webtion Lab">
-            <input type="hidden" name="from_name" value="Webtion Lab Website">
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-          <div id="quoteFormContent">
+            <input type="hidden" name="subject" value="New Quote Request — Webtion Lab">
+            <input type="checkbox" name="botcheck" style="display:none">
+ 
             <div class="fh">
               <h2>Get Your Free Quote</h2>
               <p>Fill in the details below — the more you share, the better we can tailor our proposal.</p>
             </div>
-
+ 
             <div class="f-sec-title">👤 Your Details</div>
             <div class="f-row">
               <div class="fg" id="fg-name">
                 <label>Full Name *</label>
-                <input type="text" id="f-name" placeholder="e.g. Ravi Lawaniya">
+                <input type="text" id="f-name" name="name" placeholder="e.g. Ravi Lawaniya">
                 <span class="err-msg">Name is required (minimum 2 characters)</span>
               </div>
               <div class="fg" id="fg-email">
                 <label>Email Address *</label>
-                <input type="email" id="f-email" placeholder="e.g. ravi@company.com">
+                <input type="email" id="f-email" name="email" placeholder="e.g. ravi@company.com">
                 <span class="err-msg">Enter a valid email address</span>
               </div>
             </div>
             <div class="f-row">
               <div class="fg" id="fg-phone">
                 <label>Phone Number *</label>
-                <input type="tel" id="f-phone" placeholder="10-digit mobile number" maxlength="10">
+                <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile number" maxlength="10">
                 <span class="err-msg">Enter a valid 10-digit number</span>
               </div>
               <div class="fg">
                 <label>Company / Clinic Name</label>
-                <input type="text" id="f-company" placeholder="Optional">
+                <input type="text" id="f-company" name="company" placeholder="Optional">
               </div>
             </div>
-
+ 
             <div class="f-sec-title" style="margin-top:4px">🎯 Project Details</div>
             <div class="fg" id="fg-service">
               <label>Service Required *</label>
@@ -562,14 +567,14 @@
                 <div class="chip" data-service="E-Commerce Store">E-Commerce Store</div>
                 <div class="chip" data-service="Other">Other</div>
               </div>
-              <input type="hidden" id="f-service">
+              <input type="hidden" id="f-service" name="service">
               <span class="err-msg">Please select a service</span>
             </div>
-
+ 
             <div class="f-row">
               <div class="fg" id="fg-budget">
                 <label>Budget Range *</label>
-                <select id="f-budget">
+                <select id="f-budget" name="budget">
                   <option value="">Select your budget</option>
                   <option>Under ₹10,000</option>
                   <option>₹10,000 – ₹30,000</option>
@@ -582,7 +587,7 @@
               </div>
               <div class="fg" id="fg-timeline">
                 <label>Project Timeline *</label>
-                <select id="f-timeline">
+                <select id="f-timeline" name="timeline">
                   <option value="">When do you need it?</option>
                   <option>ASAP</option>
                   <option>Within 1 month</option>
@@ -593,27 +598,29 @@
                 <span class="err-msg">Please select a timeline</span>
               </div>
             </div>
-
+ 
             <div class="fg" id="fg-desc">
               <label>Describe Your Project / Query *</label>
-              <textarea id="f-desc" rows="5" placeholder="Tell us about your project — what you need, who your users are, specific features, existing systems, or anything that helps us understand your vision..."></textarea>
+              <textarea id="f-desc" name="message" rows="5" placeholder="Tell us about your project — what you need, who your users are, specific features, existing systems, or anything that helps us understand your vision..."></textarea>
               <div class="char-c" id="charCount">0 / 30 characters minimum</div>
               <span class="err-msg">Please write at least 30 characters</span>
             </div>
-
+ 
             <div class="fg">
               <label>How did you hear about us?</label>
-              <input type="text" id="f-referral" placeholder="e.g. Google, Instagram, referral from a friend...">
+              <input type="text" id="f-referral" name="referral" placeholder="e.g. Google, Instagram, referral from a friend...">
             </div>
-
-            <button class="btn-submit" id="submitBtn">🚀 Send My Quote Request</button>
+ 
+            <button type="submit" class="btn-submit" id="submitBtn">🚀 Send My Quote Request</button>
             <p class="form-note">By submitting, you agree to be contacted by Webtion Lab. Your quote will be sent to our team. We never spam.</p>
-          </div><!-- /quoteFormContent -->
-          </form>
-        </div>
-      </div><!-- /quote-right -->
-    </div>
-  </div><!-- /page-quote -->
+ 
+          </form><!-- /quoteForm -->
+        </div><!-- /quoteFormContent -->
+ 
+      </div>
+    </div><!-- /quote-right -->
+  </div>
+</div><!-- /page-quote -->
 
 </div><!-- /router-outlet -->
 
